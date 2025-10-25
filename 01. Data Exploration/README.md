@@ -1,8 +1,4 @@
-<center>
-
-# 🧾 Data Exploration with pandas — Full Topic List 
-
-</center>
+<h1 align="center"> Data Exploration with pandas — Full Topic List  </h1>
 
 ### 1️⃣ Introduction to pandas
 - Purpose: Learn to explore and manipulate data using pandas.
