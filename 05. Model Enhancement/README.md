@@ -56,7 +56,7 @@
 ### 7️⃣ Feature Engineering
 - Numerical Features গুলোকে StandardScaler দিয়ে scale করা হচ্ছে যাতে মডেল ভালোভাবে শেখে।
 
-### Level Encoding 
+### 7.1 Level Encoding 
 - প্রথমে categorical ফিচারগুলো চিহ্নিত করতে হবে।
     ```python
     X_train.columns
@@ -118,7 +118,7 @@
     y_train
   ```
 
-### Removing missing values
+### 7.2 Removing missing values
 - dropna() → যেসব রো-তে NaN (missing value) আছে, সেগুলো বাদ দেয়।
 - reset_index(drop=True) → রো বাদ দেওয়ার পর নতুন ইনডেক্স তৈরি করে।
 - y_train ও y_test এর ইনডেক্স X_train ও X_test এর সাথে মিলিয়ে নেওয়া হয়।
@@ -196,7 +196,7 @@
   ```
 ### যদিও খুবই খারাপ পারফরম্যান্স পাওয়া গেছে। এখন আমরা ইমপ্রুভ করার চেষ্টা করব। 
 
-### Imputing Missing Values
+### 7.3 Imputing Missing Values
 - প্রতিটি কলামে কতগুলো missing value (NaN) আছে তা চেক করা
   ```python 
     X_train_encoded.isna().sum()
@@ -303,7 +303,7 @@
     plt.show()                  # চার্ট ডিসপ্লে করে।
   ```
 
-### Feature Scaling or Normalization
+### 7.4 Feature Scaling or Normalization
 - StandardScaler (mean=0, std=1) ব্যবহার করা হয়েছে ডেটা স্কেলিং এর জন্য। 
     ```python
     from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -357,7 +357,7 @@
     plt.show()
   ```
 
-### One Hot Encoding
+### 7.5 One Hot Encoding
 - OneHotEncoder ব্যবহার করা হয় categorical variables কে binary vector এ রূপান্তর করার জন্য।
     ```python 
     from sklearn.preprocessing import OneHotEncoder
@@ -428,7 +428,7 @@
     plt.show()
   ```
 
-### Feature Selection
+### 7.6 Feature Selection
 - Model-এর জন্য গুরুত্বপূর্ণ ফিচারগুলো বাছাই করা।
 - Irrelevant বা noisy ফিচার বাদ দিলে:
     - মডেল দ্রুত ট্রেন হয়
