@@ -9,18 +9,23 @@
     ```python
     # ডেটা হ্যান্ডলিং ও প্রসেসিং-এর জন্য
     import pandas as pdimport pandas as pd
-    import numpy as np
+    import numpy as 
+    
     # ডেটা ভিজুয়ালাইজেশনের জন্য
     import matplotlib.pyplot as plt
-    import seaborn as sns
+    import seaborn as 
+    
     # ডেটা ট্রেনিং ও টেস্ট ভাগ করার জন্য
     from sklearn.model_selection import train_test_split
+
     # টেক্সট ফিচার তৈরি করার জন্য
     from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+
     # ক্লাসিফিকেশন মডেল
     from sklearn.linear_model import LogisticRegression
     from sklearn.naive_bayes import MultinomialNB
     from sklearn.svm import LinearSVC
+
     # মডেল ইভ্যালুয়েশনের জন্য
     from sklearn.metrics import classification_report, confusion_matrix
     ```
@@ -122,9 +127,12 @@
   ```python
     # লাইব্রেরি:
     from collections import Counter
-    # প্রতিটি ইউনিক label (যেমন — business, sports, politics ইত্যাদি) এর জন্য একটা Counter() অবজেক্ট তৈরি করা হয়েছে। এই Counter দিয়ে আমরা ঐ লেবেলের অধীনে থাকা শব্দগুলোর ফ্রিকোয়েন্সি রাখব।
+
+    # প্রতিটি ইউনিক label (যেমন — business, sports, politics ইত্যাদি) এর জন্য একটা Counter() অবজেক্ট তৈরি করা হয়েছে। 
+    # এই Counter দিয়ে আমরা ঐ লেবেলের অধীনে থাকা শব্দগুলোর ফ্রিকোয়েন্সি রাখব।
     def keyword_frequency_by_label(df, keywords):
         label_keyword_counts = {label: Counter() for label in df["label"].unique()}
+        
     # Count keyword occurrences per label : iterrows() দিয়ে DataFrame-এর প্রতিটি রো ঘুরে দেখা হচ্ছে। clean_text কলাম থেকে প্রতিটি শব্দের সংখ্যা গোনা হচ্ছে। তারপর যদি শব্দটি আমাদের keywords list-এর মধ্যে থাকে, তবে সেই শব্দের count ঐ লেবেলের Counter-এ যোগ হচ্ছে।
         for _, row in df.iterrows():
             words = row["clean_text"].split()
@@ -304,10 +312,9 @@
         clean_article = clean_text(article)              # আর্টিকেল ক্লিন করা
 
         # Feature extraction
-        # BoW
-        bow_feat = bow_vectorizer.transform([clean_article])
-        # TF-IDF
-        tfidf_feat = tfidf_vectorizer.transform([clean_article])
+        bow_feat = bow_vectorizer.transform([clean_article])      # BoW
+        tfidf_feat = tfidf_vectorizer.transform([clean_article])  # TF-IDF
+
         # Keyword frequency
         def extract_keyword_features(texts, keywords):
             features = []
