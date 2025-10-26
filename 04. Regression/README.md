@@ -106,7 +106,7 @@
     X_train      # checking scaled training features
   ```
 
-<h3 style="color:red">Handling Missing Values, Encoding Categorical Columns, Scaling Numerical Features - এই তিনটি ধাপের পর ডেটা এখন পুরোপুরি preprocessed এবং ready, Regression model train করার জন্য।</h3>
+### ❗Handling Missing Values, Encoding Categorical Columns, Scaling Numerical Features - এই তিনটি ধাপের পর ডেটা এখন পুরোপুরি preprocessed এবং ready, Regression model train করার জন্য।
 
 
 ### 1️⃣0️⃣ Training a Regression Model
